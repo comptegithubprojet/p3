@@ -43,6 +43,12 @@ abstract class CommentsManager extends Manager
       throw new \RuntimeException('Le commentaire doit être validé pour être enregistré');
     }
   }
+
+  /**
+   * Méthode permettant de récupérer la liste des commentaires.
+   * @return array
+   */
+  abstract public function getList();
  
   /**
    * Méthode permettant de récupérer une liste de commentaires.

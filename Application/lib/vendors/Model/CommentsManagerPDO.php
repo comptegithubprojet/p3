@@ -27,6 +27,22 @@ class CommentsManagerPDO extends CommentsManager
   {
     $this->dao->exec('DELETE FROM comments WHERE news = '.(int) $news);
   }
+
+  public function getList()
+  { 
+    $q = $this->dao->query('SELECT id, news, auteur, contenu, date, numberSignal FROM comments ORDER BY numberSignal DESC');
+ 
+    $q->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Comment');
+ 
+    $comments = $q->fetchAll();
+ 
+    foreach ($comments as $comment)
+    {
+      $comment->setDate(new \DateTime($comment->date()));
+    }
+ 
+    return $comments;
+  }
  
   public function getListOf($news)
   {
