@@ -7,7 +7,7 @@ class CommentsManagerPDO extends CommentsManager
 {
   protected function add(Comment $comment)
   {
-    $q = $this->dao->prepare('INSERT INTO comments SET news = :news, auteur = :auteur, contenu = :contenu, date = NOW()');
+    $q = $this->dao->prepare('INSERT INTO comments SET news = :news, auteur = :auteur, contenu = :contenu, date = NOW(), numberSignal = 0');
  
     $q->bindValue(':news', $comment->news(), \PDO::PARAM_INT);
     $q->bindValue(':auteur', $comment->auteur());
@@ -35,7 +35,7 @@ class CommentsManagerPDO extends CommentsManager
       throw new \InvalidArgumentException('L\'identifiant de la news passé doit être un nombre entier valide');
     }
  
-    $q = $this->dao->prepare('SELECT id, news, auteur, contenu, date FROM comments WHERE news = :news');
+    $q = $this->dao->prepare('SELECT id, news, auteur, contenu, date, numberSignal FROM comments WHERE news = :news');
     $q->bindValue(':news', $news, \PDO::PARAM_INT);
     $q->execute();
  
@@ -53,10 +53,11 @@ class CommentsManagerPDO extends CommentsManager
  
   protected function modify(Comment $comment)
   {
-    $q = $this->dao->prepare('UPDATE comments SET auteur = :auteur, contenu = :contenu WHERE id = :id');
+    $q = $this->dao->prepare('UPDATE comments SET auteur = :auteur, contenu = :contenu, numberSignal = :numberSignal WHERE id = :id');
  
     $q->bindValue(':auteur', $comment->auteur());
     $q->bindValue(':contenu', $comment->contenu());
+    $q->bindValue(':numberSignal', $comment->numberSignal());
     $q->bindValue(':id', $comment->id(), \PDO::PARAM_INT);
  
     $q->execute();
@@ -64,7 +65,7 @@ class CommentsManagerPDO extends CommentsManager
  
   public function get($id)
   {
-    $q = $this->dao->prepare('SELECT id, news, auteur, contenu FROM comments WHERE id = :id');
+    $q = $this->dao->prepare('SELECT id, news, auteur, contenu, numberSignal FROM comments WHERE id = :id');
     $q->bindValue(':id', (int) $id, \PDO::PARAM_INT);
     $q->execute();
  

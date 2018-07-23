@@ -65,7 +65,8 @@ class NewsController extends BackController
       $comment = new Comment([
         'id' => $request->getData('id'),
         'auteur' => $request->postData('auteur'),
-        'contenu' => $request->postData('contenu')
+        'contenu' => $request->postData('contenu'),
+        'numberSignal' => $this->managers->getManagerOf('Comments')->get($request->getData('id'))->numberSignal()
       ]);
     }
     else
