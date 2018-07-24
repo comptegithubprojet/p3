@@ -32,6 +32,7 @@ class NewsFormBuilder extends FormBuilder
        ->add(new TextField([
         'label' => 'Contenu',
         'name' => 'contenu',
+        'class' => 'tinymce',
         'rows' => 8,
         'cols' => 60,
         'validators' => [
