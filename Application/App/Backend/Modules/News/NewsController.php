@@ -46,9 +46,11 @@ class NewsController extends BackController
   {
     $this->page->addVar('title', 'Liste des commentaires');
 
-    $manager = $this->managers->getManagerOf('Comments');
+    $commentManager = $this->managers->getManagerOf('Comments');
+    $newsManager = $this->managers->getManagerOf('News');
 
-    $this->page->addVar('listComments', $manager->getList());
+    $this->page->addVar('listComments', $commentManager->getList());
+    $this->page->addVar('listNews', $newsManager->getList());
   }
  
   public function executeInsert(HTTPRequest $request)

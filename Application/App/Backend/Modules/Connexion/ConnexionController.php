@@ -30,6 +30,6 @@ class ConnexionController extends BackController
   public function executeDisconnect(HTTPRequest $request)
   {
     $this->app->user()->setAuthenticated(false);
-    $this->app->httpResponse()->redirect('.');
+    $this->app->httpResponse()->redirect('/');
   }
 }
