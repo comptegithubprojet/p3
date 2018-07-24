@@ -21,7 +21,7 @@
         <ul>
           <li><a href="/">Accueil</a></li>
           <?php if ($user->isAuthenticated()) { ?>
-          <li><a href="/admin/">Admin</a></li>
+          <li><a href="/admin/">Liste des News</a></li>
           <li><a href="/admin/news-insert.html">Ajouter une news</a></li>
           <li><a href="/admin/comments-list.html">Liste des commentaires</a></li>
           <li><a href="/admin/disconnect.html">Deconnexion</a></li>
@@ -39,5 +39,9 @@
  
       <footer></footer>
     </div>
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/plugin/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="/plugin/tinymce/init-tinymce.js"></script>
   </body>
 </html>
