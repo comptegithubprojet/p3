@@ -26,8 +26,27 @@ foreach ($listComments as $comment)
   '</td><td>le ', $comment['date']->format('d/m/Y à H\hi'), 
   '</td><td>', $comment['numberSignal'], 
   '</td><td>
-  	<a href="comment-update-', $comment['id'], '.html"><img src="/images/update.png" alt="Modifier" /></a> 
-  	<a href="comment-delete-', $comment['id'], '.html"><img src="/images/delete.png" alt="Supprimer" /></a>
+  
+    <a role="button" id="btn_modal_comment" class="btn btn-warning" href="comment-update-', $comment['id'], '.html"><span class="glyphicon glyphicon-edit"></span></a> 
+
+    <button class="btn btn-danger" data-toggle="modal" href="#delete', $comment['id'], '"><span class="glyphicon glyphicon-trash"></span></button>
+        <div class="modal fade" id="delete', $comment['id'], '">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Etes vous sur de vouloir supprimer le commentaire  de ', $comment['auteur'], ' ?</h4>
+              </div>
+              <div class="modal-body">
+                ', $comment['contenu'], '
+              </div>
+              <div class="modal-footer">
+                <a id="btn_modal_comment" role="button" class="btn btn-danger" href="comment-delete-', $comment['id'], '.html">Supprimer</a>
+                <button class="btn btn-default" data-dismiss="modal">Annuler</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
    </td></tr>', "\n";
 }
 ?>

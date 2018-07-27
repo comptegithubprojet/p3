@@ -94,7 +94,7 @@ class NewsController extends BackController
 
     $this->managers->getManagerOf('Comments')->save($comment);
 
-    $this->app->httpResponse()->redirect('.');
+    $this->app->httpResponse()->redirect('news-'.$comment->news().'.html');
     
   }
 }
