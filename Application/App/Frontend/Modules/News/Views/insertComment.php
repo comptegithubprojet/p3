@@ -3,6 +3,6 @@
   <p>
     <?= $form ?>
  
-    <input type="submit" value="Commenter" />
+    <input role="button" class="btn btn-default" type="submit" value="Commenter"/>
   </p>
 </form>

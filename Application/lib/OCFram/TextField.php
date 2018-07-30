@@ -21,6 +21,10 @@ class TextField extends Field
     {
       $widget .= ' class="'.$this->class.'"';
     }
+    else
+    {
+      $widget .=' class=form-control';
+    }
  
     if (!empty($this->cols))
     {
