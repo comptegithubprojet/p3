@@ -1,4 +1,20 @@
-#btn_modal_comment
+body 
 {
-	color:white;
+  font-family: Arial;
+  padding: 20px;
+}
+
+.header 
+{
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+.card 
+{
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-top: 20px;
 }

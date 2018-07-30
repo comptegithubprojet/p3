@@ -1,4 +1,4 @@
-<table>
+<table class="table table-bordered table-striped table-condensed">
 
   <tr>
   	<th>Auteur</th>
@@ -23,7 +23,7 @@ foreach ($listComments as $comment)
   	} 
   }
    echo
-  '</td><td>le ', $comment['date']->format('d/m/Y à H\hi'), 
+  '</td><td> ', $comment['date']->format('d/m/Y - H\hi'), 
   '</td><td>', $comment['numberSignal'], 
   '</td><td>
   

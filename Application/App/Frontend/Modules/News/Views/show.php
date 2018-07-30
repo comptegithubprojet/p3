@@ -19,13 +19,11 @@ if (empty($comments))
 foreach ($comments as $comment)
 {
 ?>
-<fieldset>
-  <legend>
 
     <div class="container">      
       <div id="html">
 
-    Posté par <strong><?= htmlspecialchars($comment['auteur']) ?></strong> le <?= $comment['date']->format('d/m/Y à H\hi') ?>
+    <strong><?= htmlspecialchars($comment['auteur']) ?></strong> le <?= $comment['date']->format('d/m/Y à H\hi') ?>
     <?php if ($user->isAuthenticated()) { ?> 
 
       -
@@ -77,12 +75,9 @@ foreach ($comments as $comment)
       </div>
     </div>
 
-  </legend>
   <p><?= nl2br(htmlspecialchars($comment['contenu'])) ?></p>
-</fieldset>
+
 
 <?php
 }
 ?>
- 
-<p><a href="commenter-<?= $news['id'] ?>.html">Ajouter un commentaire</a></p>
