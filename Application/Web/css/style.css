@@ -72,3 +72,18 @@ body
     font-weight: 400;
     display: block;
 }
+
+.comments-list .media{
+    border-bottom: 1px solid #ccc;
+}
+
+.media
+{
+  padding-bottom: 10px;
+}
+
+.button-comment-add
+{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

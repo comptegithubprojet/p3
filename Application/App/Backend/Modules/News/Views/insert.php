@@ -3,7 +3,7 @@
   <p>
     <?= $form ?>
  
-    <input type="submit" value="Ajouter" />
+    <input role="button" class="btn btn-default" type="submit" value="Ajouter" />
 
   </p>
 </form>
