@@ -59,9 +59,10 @@
               </div>
             </div>
 
-        <?php } ?>
+          -
 
-        - 
+        <?php } ?>
+        
         
         <a data-toggle="modal" href="#signaler<?= $comment['id']?>">Signaler</a>
         <div class="modal fade" id="signaler<?= $comment['id']?>">
