@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-6 col-md-4 col-md-offset-4">
+    <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
         <h1 class="text-center login-title">Se connecter</h1>
         <div class="account-wall">
             <form action="" method="post" class="form-signin">

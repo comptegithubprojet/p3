@@ -12,10 +12,13 @@
   </head>
  
   <body>
+
     <div class="container" id="wrap">
 
-      <header>
-        <h1>Jean Forteroche</a></h1>
+      <header class="row">
+        <div class="col-sm-offset-4 col-sm-4">
+          <h1>Jean Forteroche</a></h1>
+        </div>
       </header>
 
       <nav class="navbar navbar-inverse" role="navigation">   
