@@ -7,13 +7,13 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
  
   <body>
 
     <div class="container" id="wrap">
-
       <header class="row">
         <div class="col-sm-offset-4 col-sm-4">
           <h1>Jean Forteroche</a></h1>
@@ -23,13 +23,11 @@
 
     <div class="container-fluid">
 
-      <nav class="navbar navbar-inverse">
+      <nav class="navbar">
 
         <div class="navbar-header">   
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
           </button>
         </div>
 
@@ -73,10 +71,10 @@
 
           <div class="clearfix visible-md-block visible-lg-block">
             <ul class="nav navbar-nav navbar-right">
-              <li><a class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></a></li>
-              <li><a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span></a></li>
-              <li><a class="btn btn-social-icon btn-instagram"><span class="fa fa-instagram"></span></a></li>
-              <li class="pull-right"><a class="btn btn-social-icon btn-youtube"><span class="fa fa-youtube"></span></a></li>
+              <li><a class="btn btn-social-icon btn-twitter"><span id="btn-social" class="fa fa-twitter"></span></a></li>
+              <li><a class="btn btn-social-icon btn-facebook"><span id="btn-social" class="fa fa-facebook"></span></a></li>
+              <li><a class="btn btn-social-icon btn-instagram"><span id="btn-social" class="fa fa-instagram"></span></a></li>
+              <li class="pull-right"><a class="btn btn-social-icon btn-youtube"><span id="btn-social" class="fa fa-youtube"></span></a></li>
             </ul>
           </div>
 
@@ -85,18 +83,20 @@
       </nav>
     </div>
 
-    <div class="container">
  
-      <div id="content-wrap">
-        <section id="main">
-          
-          <?php if ($user->hasFlash()) echo '<div class="alert col-lg-offset-3 col-lg-6 alert-success alert-dismissable">', $user->getFlash(), '<button type="button" class="close" data-dismiss="alert">&times;</button></div>'; ?>
- 
-          <?= $content ?>
-        </section>
-      </div>
+    <div id="content-wrap">
+      <section id="main">
 
+        <div class="container">
+          <?php if ($user->hasFlash()) echo '<div class="alert col-lg-offset-3 col-lg-6 alert-success alert-dismissable">', $user->getFlash(), '<button type="button" class="close" data-dismiss="alert">&times;</button></div>'; ?>
+        </div>
+
+        <?= $content ?>
+
+      </section>
     </div>
+
+
 
     <div class="container-fluid">
 

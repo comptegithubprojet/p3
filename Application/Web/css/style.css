@@ -1,12 +1,11 @@
 header
 {
-
   padding-bottom: 40px;
 }
 
 body 
 {
-  font-family: Arial;
+  font-family: Abel;
   padding: 20px;
 }
 
@@ -110,3 +109,95 @@ body
 {
   margin-bottom: 20px;
 }
+
+.navbar
+{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0px;
+
+}
+
+.navbar a
+{
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.nav>li>a:focus, .nav>li>a:hover 
+{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+#btn-social
+{
+    color: skyblue;
+    font-size:20px;
+}
+
+#btn-social:focus, #btn-social:hover 
+{
+    -moz-transition: color .6s ease-in;
+    -o-transition: color .6s ease-in;
+    -webkit-transition: color .6s ease-in;
+    transition: color .6s ease-in;
+
+    text-decoration: none;
+    background-color: white;
+    color: #666666;
+}
+
+
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover 
+{
+    background-color: white;
+}
+
+.navbar-header
+{
+  color: #666666;
+}
+
+@media (min-width: 768px) 
+{
+    ul.nav li.dropdown:hover > ul.dropdown-menu 
+    {
+        display: block;    
+    }
+}
+
+#img-fs 
+{ 
+    padding : 0px 0px 0px 0px;
+    margin: 40px 0px 0px 0px;
+}
+
+@media (max-width: 768px) {
+  #img-fs 
+  {
+    margin: 20px 0px 0px 0px;
+  }
+}
+
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+
+.container-fluid
+{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
