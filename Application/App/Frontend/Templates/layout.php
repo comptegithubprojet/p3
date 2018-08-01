@@ -15,9 +15,7 @@
 
     <div class="container" id="wrap">
       <header class="row">
-        <div class="col-sm-offset-4 col-sm-4">
-          <h1>Jean Forteroche</a></h1>
-        </div>
+          <h1 id="header-titre">Jean Forteroche</a></h1>
       </header>
     </div>  
 
@@ -71,10 +69,10 @@
 
           <div class="clearfix visible-md-block visible-lg-block">
             <ul class="nav navbar-nav navbar-right">
-              <li><a class="btn btn-social-icon btn-twitter"><span id="btn-social" class="fa fa-twitter"></span></a></li>
-              <li><a class="btn btn-social-icon btn-facebook"><span id="btn-social" class="fa fa-facebook"></span></a></li>
-              <li><a class="btn btn-social-icon btn-instagram"><span id="btn-social" class="fa fa-instagram"></span></a></li>
-              <li class="pull-right"><a class="btn btn-social-icon btn-youtube"><span id="btn-social" class="fa fa-youtube"></span></a></li>
+              <li><a class="btn btn-social-icon btn-twitter"><span id="btn-social-menu" class="fa fa-twitter"></span></a></li>
+              <li><a class="btn btn-social-icon btn-facebook"><span id="btn-social-menu" class="fa fa-facebook"></span></a></li>
+              <li><a class="btn btn-social-icon btn-instagram"><span id="btn-social-menu" class="fa fa-instagram"></span></a></li>
+              <li><a class="btn btn-social-icon btn-youtube"><span id="btn-social-menu" class="fa fa-youtube"></span></a></li>
             </ul>
           </div>
 
@@ -100,8 +98,55 @@
 
     <div class="container-fluid">
 
-      <footer>
-        
+      <footer id="footer">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <img id="img-footer" src="images/footer.jpg" class="img-responsive">
+
+            <div class="all-socials">
+              
+              <h3>Mes reseaux</h3>
+
+              <div id="carouselFooter" class="carousel slide" data-ride="carousel" >
+
+                <a id="carousel-arrow-footer" class="left carousel-control" href="#carouselFooter" data-slide="prev">
+                  <span id="icon-arrow-carousel" class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <a class="btn"><img src="/images/twitter.png" alt="First slide"></a>
+                    <a class="btn btn-social-icon btn-twitter" id="btn-social-footer"><span class="fa fa-twitter"></span> Twitter</a>
+                  </div>
+                  <div class="item">
+                    <a class="btn"><img src="/images/facebook.png" alt="Second slide"></a>
+                    <a class="btn btn-social-icon btn-facebook" id="btn-social-footer"><span class="fa fa-facebook"></span> Facebook</a>
+                  </div>
+                  <div class="item">
+                    <a class="btn"><img src="/images/instagram.png" alt="Third slide"></a>
+                    <a class="btn btn-social-icon btn-instagram" id="btn-social-footer"><span class="fa fa-instagram"></span> Instagram</a>
+                  </div>
+                  <div class="item">
+                    <a class="btn"><img src="/images/youtube.png" alt="Fourth slide"></a>
+                    <a class="btn btn-social-icon btn-youtube" id="btn-social-footer"><span class="fa fa-youtube"></span> Youtube</a>
+                  </div>
+                </div>  
+
+                <a id="carousel-arrow-footer" class="right carousel-control" href="#carouselFooter" data-slide="next">
+                  <span id="icon-arrow-carousel" class="glyphicon glyphicon-chevron-right"></span>
+                </a>              
+
+              </div>
+
+            </div>
+
+            <div class="copyright">
+              <p> © COPYRIGHT 2018 - JEAN FORTEROCHE - TOUS DROITS RÉSERVÉS</p>
+            </div>
+
+          </div>
+        </div>
       </footer>
 
     </div>
