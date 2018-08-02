@@ -23,7 +23,7 @@
 							<p><?= nl2br($news['contenu']) ?></p>
 						</div>
 						<div class="card-footer">
-							<p>Publié le : <?= $news['dateAjout']->format('d/m/Y à H\hi') ?></p>
+							<p id="date-article">Publié le : <?= $news['dateAjout']->format('d/m/Y à H\hi') ?></p>
 							<p id="lire-plus"><a href="news-<?= $news['id'] ?>.html">Lire plus...</a></p>
 						</div>					
 					</div>

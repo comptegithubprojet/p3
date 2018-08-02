@@ -37,6 +37,8 @@ body
 .card-header a
 {
   color: #666666;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .card-header a:hover
@@ -50,11 +52,25 @@ body
   padding: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  font-size: 18px;
 }
 
 .card-footer
 {
   padding:5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+#lire-plus
+{
+  margin-right: 20px;
+}
+
+#date-article
+{
+  margin-left: 10px;
 }
 
 
@@ -207,7 +223,7 @@ body
 #img-fs 
 { 
     padding : 0px 0px 0px 0px;
-    margin: 40px 0px 0px 0px;
+    margin: 40px 0px 40px 0px;
 }
 
 @media (max-width: 768px) {
@@ -343,3 +359,26 @@ html,body
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+
+#page_navigation
+{
+  margin-top: 10px;
+  text-align: center;
+  
+}
+
+#page_navigation a
+{
+  border:0px;
+  font-size: 20px;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
