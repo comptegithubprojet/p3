@@ -19,8 +19,8 @@ function go_to_page(page_num){
   start_from = current_page * show_per_page;
   end_on = start_from + show_per_page;
   set_display(start_from, end_on);
-  $('.active').removeClass('active');
-  $('#id' + page_num).addClass('active');
+  $('.page_link').removeClass('active');
+  $('#id' + page_num).addClass('active');;
 }  
 
 $(document).ready(function() {

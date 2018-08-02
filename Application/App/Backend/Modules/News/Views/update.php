@@ -2,15 +2,17 @@
 	<div class="row">
 		<div class="col-lg-12">
 
-			<h2 class="title-form">Modifier une news</h2>
+			<div class="admin-block clearfix">
+				<h2 id="title-admin">Modifier la news</h2>
 
-			<form action="" method="post">
-			  <p>
-			    <?= $form ?>
-			 
-			    <input role="button" class="btn btn-default" type="submit" value="Modifier" />
-			  </p>
-			</form>
+				<form class="form-group" action="" method="post">
+				  <p id="text-admin">
+				    <?= $form ?>
+				 
+				    <input id="text-admin" role="button" class="btn btn-default pull-right" type="submit" value="Modifier" />
+				  </p>
+				</form>
+			</div>
 
 		</div>
 	</div>

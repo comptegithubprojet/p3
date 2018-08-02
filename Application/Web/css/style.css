@@ -19,15 +19,43 @@ body
 #header-titre
 {
   text-align: center;
+  font-size: 70px;
 }
 
 .card 
 {
-  background-color: #f1f1f1;
-  padding: 20px;
   margin-top: 20px;
+  border: 1px solid #ccc;
 }
 
+.card-header
+{
+  padding:5px;
+  text-align: center;
+}
+
+.card-header a
+{
+  color: #666666;
+}
+
+.card-header a:hover
+{
+  text-decoration: none;
+  color:#666666;
+}
+
+.card-content
+{
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-footer
+{
+  padding:5px;
+}
 
 
 .form-signin
@@ -205,6 +233,10 @@ html,body
 }
 
 
+
+
+
+
 #footer
 {
   text-align: center;
@@ -275,4 +307,39 @@ html,body
   color: black;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+
+
+
+.admin-block
+{
+  background-color: #F1F1F1;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#admin-block-table
+{
+  background-color: white;
+}
+
+#title-admin
+{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+#text-admin
+{
+  font-size: 20px;
+}
+
+#btn-table
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

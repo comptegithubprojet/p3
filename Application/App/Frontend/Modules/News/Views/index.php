@@ -16,8 +16,16 @@
 				{
 				?>
 					<div class="card">
-						<h2><a href="news-<?= $news['id'] ?>.html"><?= $news['titre'] ?></a></h2>
-						<p><?= nl2br($news['contenu']) ?></p>
+						<div class="card-header">
+							<h2><a href="news-<?= $news['id'] ?>.html"><?= $news['titre'] ?></a></h2>
+						</div>
+						<div class="card-content">
+							<p><?= nl2br($news['contenu']) ?></p>
+						</div>
+						<div class="card-footer">
+							<p>Publié le : <?= $news['dateAjout']->format('d/m/Y à H\hi') ?></p>
+							<p id="lire-plus"><a href="news-<?= $news['id'] ?>.html">Lire plus...</a></p>
+						</div>					
 					</div>
 				<?php
 				}

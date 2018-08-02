@@ -98,11 +98,11 @@
 
     <div class="container-fluid">
 
-      <footer id="footer">
+      <footer id="footer" class="clearfix">
         <div class="row">
           <div class="col-xs-12">
 
-            <img id="img-footer" src="images/footer.jpg" class="img-responsive">
+            <img id="img-footer" src="/images/footer.jpg" class="img-responsive">
 
             <div class="all-socials">
               
