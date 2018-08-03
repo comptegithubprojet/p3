@@ -9,7 +9,8 @@ class News extends Entity
             $titre,
             $contenu,
             $dateAjout,
-            $dateModif;
+            $dateModif,
+            $imagePrincipale;
  
   const AUTEUR_INVALIDE = 1;
   const TITRE_INVALIDE = 2;
@@ -62,6 +63,11 @@ class News extends Entity
   {
     $this->dateModif = $dateModif;
   }
+
+  public function setImagePrincipale($imagePrincipale)
+  {
+    $this->imagePrincipale = $imagePrincipale;
+  }
  
   // GETTERS //
  
@@ -88,5 +94,10 @@ class News extends Entity
   public function dateModif()
   {
     return $this->dateModif;
+  }
+
+  public function imagePrincipale()
+  {
+    return $this->imagePrincipale;
   }
 }

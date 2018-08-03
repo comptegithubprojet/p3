@@ -3,10 +3,10 @@ namespace OCFram;
  
 class StringField extends Field
 {
-  protected $maxLength;
- 
-  public function buildWidget()
-  {
+    protected $maxLength;
+   
+    public function buildWidget()
+    {
     $widget = '';
  
     if (!empty($this->errorMessage))
