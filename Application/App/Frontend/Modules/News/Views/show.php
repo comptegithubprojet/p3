@@ -2,7 +2,13 @@
   <div class="row">
     <div class="col-lg-12">
       <h2><?= $news['titre'] ?></h2>
-      <p><?= nl2br($news['contenu']) ?></p>
+      <?php
+      if ($news['imagePrincipale'] != null) 
+      {
+        echo "<img src='/images/".$news['imagePrincipale']."' >"; 
+      }
+      ?>
+      <p><?= nl2br($news['contenu']) ?></p>    
       <div class="row">
         <p class="pull-right">Auteur :  <em><?= $news['auteur'] ?></em>, le <?= $news['dateAjout']->format('d/m/Y à H\hi') ?></p>
       </div> 

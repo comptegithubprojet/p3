@@ -34,9 +34,8 @@ class NewsFormBuilder extends FormBuilder
        ->add(new FileField([
         'label' => 'Image',
         'name' => 'imagePrincipale',
-        'accept' => 'image/png, image/jpeg',
+        'accept' => 'image/*',
         'validators' => [
-          new ImageValidator('L image n est pas au bon format', 'jpeg'),
         ],
        ]))
        ->add(new TextField([

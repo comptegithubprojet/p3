@@ -8,7 +8,7 @@
 
 <div class="container">
 	<div class="row">
-	 	<div class="col-lg-12">
+	 	
 
 	 		<div id="content-news">
 				<?php
@@ -18,6 +18,14 @@
 					<div class="card">
 						<div class="card-header">
 							<h2><a href="news-<?= $news['id'] ?>.html"><?= $news['titre'] ?></a></h2>
+						</div>
+						<div class="card-imagePrincipale">
+							<?php
+							if ($news['imagePrincipale'] != null) 
+							{
+								echo "<img id='img-article-index' class='img-responsive center-block' src='/images/".$news['imagePrincipale']."' >"; 
+							}
+							?>
 						</div>
 						<div class="card-content">
 							<p><?= nl2br($news['contenu']) ?></p>
@@ -32,8 +40,9 @@
 				?>
 			</div>
 
-			<div id="page_navigation"> </div>
-
-		</div>
+			<div class="col-lg-12">
+				<div id="page_navigation"> </div>
+			</div>
+		
 	</div>
 </div>

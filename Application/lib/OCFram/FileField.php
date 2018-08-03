@@ -13,7 +13,7 @@ class FileField extends Field
 	  $widget .= $this->errorMessage.'<br />';
 	}
 
-	$widget .= '<label>'.$this->label.'</label><input class="form-control" type="file" name="'.$this->name.'"';
+	$widget .= '<label>'.$this->label.'</label><input class="form-control-file" type="file" name="'.$this->name.'"';
 
 	if (!empty($this->value))
 	{
