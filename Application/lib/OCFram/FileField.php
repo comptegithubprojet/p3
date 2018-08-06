@@ -20,7 +20,7 @@ class FileField extends Field
 
 		<p><img class="img-responsive" id="preview_image_form" src="'; 
 
-			if (isset($this->value)) 
+			if (!empty($this->value)) 
 			{
 				$widget .= '/images/'.$this->value; 
 			}
@@ -28,14 +28,7 @@ class FileField extends Field
 		$widget .= '" /></p>
 
 		<label id="btn-file-input" for="file-input" role="btn" class="btn btn-primary pull-right">'.$this->label.'</label>
-		<input onchange="readURL(this);" id="file-input"  type="file" name="'.$this->name.'"';
-
-		if (!empty($this->value))
-		{
-		  $widget .= ' value="'.htmlspecialchars($this->value).'"';
-		}
-
-		$widget .= ' /></div>';
+		<input onchange="readURL(this);" id="file-input"  type="file" name="'.$this->name.'"/></div>';
 
 		if (!empty($this->errorMessage))
 		{

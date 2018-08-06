@@ -20,6 +20,11 @@ class TextField extends Field
     {
       $widget .=' class=form-control';
     }
+
+    if (!empty($this->errorMessage))
+    {
+      $widget .= ' style="border-color:red;"';
+    }
  
     if (!empty($this->cols))
     {

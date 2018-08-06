@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2><?= $news['titre'] ?></h2>
+      <h2 id='title-article-view'><?= $news['titre'] ?></h2>
       <?php
       if ($news['imagePrincipale'] != null) 
       {
-        echo "<img src='/images/".$news['imagePrincipale']."' >"; 
+        echo "<img id='img-article-view' class='img-responsive' src='/images/".$news['imagePrincipale']."' >"; 
       }
       ?>
       <p><?= nl2br($news['contenu']) ?></p>    

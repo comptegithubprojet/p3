@@ -106,11 +106,28 @@ class NewsController extends BackController
   {
     if ($request->method() == 'POST')
     {
+
+      if(!empty($request->postData('imagePrincipale')))
+      {
+        $imagePrincipale = $request->postData('imagePrincipale');
+      }
+      else
+      {
+        if ($request->getExists('id'))
+        {
+          $imagePrincipale = $this->managers->getManagerOf('News')->getUnique($request->getData('id'))->imagePrincipale();
+        }
+        else
+        {
+          $imagePrincipale = null;
+        }
+      }
+
       $news = new News([
         'auteur' => $request->postData('auteur'),
         'titre' => $request->postData('titre'),
         'contenu' => $request->postData('contenu'),
-        'imagePrincipale' => $request->postData('imagePrincipale')
+        'imagePrincipale' => $imagePrincipale
       ]);
  
       if ($request->getExists('id'))

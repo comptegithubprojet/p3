@@ -73,12 +73,6 @@
 
             <li><a href="#">Contact</a></li>        
 
-            <?php if ($user->isAuthenticated()) { ?>
-            <li><a href="/admin/">Liste des News</a></li>
-            <li><a href="/admin/news-insert.html">Ajouter une news</a></li>
-            <li><a href="/admin/comments-list.html">Liste des commentaires</a></li>
-            <li><a href="/admin/disconnect.html">Deconnexion</a></li>
-            <?php } ?>
           </ul>
 
           <div class="clearfix visible-md-block visible-lg-block">
