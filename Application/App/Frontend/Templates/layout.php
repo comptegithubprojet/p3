@@ -13,10 +13,8 @@
  
   <body>
 
-    <div class="container-fluid" id="wrap">
-      <header id="header-fronted">
-
-        <?php if ($user->isAuthenticated()) { ?>
+    <div class="container-fluid">
+      <?php if ($user->isAuthenticated()) { ?>
         <div class="barre-admin">
           <ul class="list-inline">
             <li><a role="btn" class="btn" href="/"><span class="fas fa-home"></span> Accueil du site</a></li>
@@ -25,8 +23,12 @@
           </ul>
         </div>
         <?php } ?>
+    </div>
 
-        <h1 id="header-titre">Jean Forteroche</a></h1>
+    <div class="container-fluid" id="wrap">
+      <header id="header-fronted">
+
+        <h1 id="header-titre" <?php if ($user->isAuthenticated()) { echo 'style="margin-top:60px;"'; } ?>>Jean Forteroche</a></h1>
 
       </header>
     </div>  
@@ -81,10 +83,10 @@
 
           <div class="clearfix visible-md-block visible-lg-block">
             <ul class="nav navbar-nav navbar-right">
-              <li><a class="btn btn-social-icon btn-twitter"><span id="btn-social-menu" class="fa fa-twitter"></span></a></li>
-              <li><a class="btn btn-social-icon btn-facebook"><span id="btn-social-menu" class="fa fa-facebook"></span></a></li>
-              <li><a class="btn btn-social-icon btn-instagram"><span id="btn-social-menu" class="fa fa-instagram"></span></a></li>
-              <li><a class="btn btn-social-icon btn-youtube"><span id="btn-social-menu" class="fa fa-youtube"></span></a></li>
+              <li><a class="btn btn-social-icon btn-twitter"><span id="btn-social-menu" class="fab fa-twitter"></span></a></li>
+              <li><a class="btn btn-social-icon btn-facebook"><span id="btn-social-menu" class="fab fa-facebook"></span></a></li>
+              <li><a class="btn btn-social-icon btn-instagram"><span id="btn-social-menu" class="fab fa-instagram"></span></a></li>
+              <li><a class="btn btn-social-icon btn-youtube"><span id="btn-social-menu" class="fab fa-youtube"></span></a></li>
             </ul>
           </div>
 
@@ -96,10 +98,6 @@
  
     <div id="content-wrap">
       <section id="main">
-
-        <div class="container">
-          <?php if ($user->hasFlash()) echo '<div class="alert col-lg-offset-3 col-lg-6 alert-success alert-dismissable">', $user->getFlash(), '<button type="button" class="close" data-dismiss="alert">&times;</button></div>'; ?>
-        </div>
 
         <?= $content ?>
 
@@ -129,19 +127,19 @@
                 <div class="carousel-inner">
                   <div class="item active">
                     <a class="btn"><img src="/images/twitter.png" alt="First slide"></a>
-                    <a class="btn btn-social-icon btn-twitter" id="btn-social-footer"><span class="fa fa-twitter"></span> Twitter</a>
+                    <a class="btn btn-social-icon btn-twitter" id="btn-social-footer"><span class="fab fa-twitter"></span> Twitter</a>
                   </div>
                   <div class="item">
                     <a class="btn"><img src="/images/facebook.png" alt="Second slide"></a>
-                    <a class="btn btn-social-icon btn-facebook" id="btn-social-footer"><span class="fa fa-facebook"></span> Facebook</a>
+                    <a class="btn btn-social-icon btn-facebook" id="btn-social-footer"><span class="fab fa-facebook"></span> Facebook</a>
                   </div>
                   <div class="item">
                     <a class="btn"><img src="/images/instagram.png" alt="Third slide"></a>
-                    <a class="btn btn-social-icon btn-instagram" id="btn-social-footer"><span class="fa fa-instagram"></span> Instagram</a>
+                    <a class="btn btn-social-icon btn-instagram" id="btn-social-footer"><span class="fab fa-instagram"></span> Instagram</a>
                   </div>
                   <div class="item">
                     <a class="btn"><img src="/images/youtube.png" alt="Fourth slide"></a>
-                    <a class="btn btn-social-icon btn-youtube" id="btn-social-footer"><span class="fa fa-youtube"></span> Youtube</a>
+                    <a class="btn btn-social-icon btn-youtube" id="btn-social-footer"><span class="fab fa-youtube"></span> Youtube</a>
                   </div>
                 </div>  
 

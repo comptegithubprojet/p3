@@ -251,7 +251,6 @@ html,body
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; 
 }
 
 
@@ -397,9 +396,9 @@ html,body
 .barre-admin
 {
   background-color: #23282D;
-  position: absolute;
+  position: fixed;
   z-index: 2;
-  width: 100%
+  width: 100%;
 }
 
 
@@ -412,6 +411,11 @@ html,body
 .barre-admin i
 {
   color: white;
+}
+
+.barre-admin ul
+{
+  margin-bottom: 0px;
 }
 
 .barre-admin a:hover
@@ -427,7 +431,7 @@ html,body
   height: 100%;
   width: 100%;
   max-width: 200px;
-  position: absolute;
+  position: fixed;
   padding-top: 60px;
   z-index: 1;
 }
@@ -453,3 +457,13 @@ html,body
   }
 } 
 
+
+
+
+
+#msg_erreur_form
+{
+  color:red;
+  font-size: 14px;
+  font-weight: bold;
+}

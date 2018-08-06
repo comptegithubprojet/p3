@@ -10,11 +10,6 @@ class TextField extends Field
   {
     $widget = '';
  
-    if (!empty($this->errorMessage))
-    {
-      $widget .= $this->errorMessage.'<br />';
-    }
- 
     $widget .= '<label>'.$this->label.'</label><textarea name="'.$this->name.'"';
 
     if(!empty($this->class))
@@ -43,7 +38,14 @@ class TextField extends Field
       $widget .= htmlspecialchars($this->value);
     }
  
-    return $widget.'</textarea>';
+    $widget .='</textarea>';
+
+    if (!empty($this->errorMessage))
+    {
+      $widget .= '<p id=msg_erreur_form>'.$this->errorMessage.'<p/>';
+    }
+
+    return $widget;
   }
  
   public function setCols($cols)

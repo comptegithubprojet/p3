@@ -1,6 +1,11 @@
 <div class="container-fluid">
 
   <div id="admin-block-table" class="admin-block clearfix">
+
+    <div class="container">
+      <?php if ($user->hasFlash()) echo '<div class="alert col-lg-offset-3 col-lg-6 alert-success alert-dismissable">', $user->getFlash(), '<button type="button" class="close" data-dismiss="alert">&times;</button></div>'; ?>
+    </div>
+        
     <h2 id="title-admin">Liste des commentaires</h2>
 
     <table id="text-admin" class="table table-bordered table-striped table-condensed">

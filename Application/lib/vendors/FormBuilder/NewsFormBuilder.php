@@ -36,6 +36,7 @@ class NewsFormBuilder extends FormBuilder
         'name' => 'imagePrincipale',
         'accept' => 'image/*',
         'validators' => [
+          new ImageValidator('Merci de spécifier une image', array('.jpg', '.png', '.jpeg')),
         ],
        ]))
        ->add(new TextField([

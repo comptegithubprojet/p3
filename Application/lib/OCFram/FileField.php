@@ -6,20 +6,22 @@ class FileField extends Field
 
 	public function buildWidget()
 	{
-	$widget = '';
+		$widget = '';
 
-	if (!empty($this->errorMessage))
-	{
-	  $widget .= $this->errorMessage.'<br />';
-	}
+		$widget .= '<label>'.$this->label.'</label><input class="form-control-file" type="file" name="'.$this->name.'"';
 
-	$widget .= '<label>'.$this->label.'</label><input class="form-control-file" type="file" name="'.$this->name.'"';
+		if (!empty($this->value))
+		{
+		  $widget .= ' value="'.htmlspecialchars($this->value).'"';
+		}
 
-	if (!empty($this->value))
-	{
-	  $widget .= ' value="'.htmlspecialchars($this->value).'"';
-	}
+		$widget .= ' />';
 
-	return $widget .= ' />';
+		if (!empty($this->errorMessage))
+		{
+		  $widget .= '<p id=msg_erreur_form>'.$this->errorMessage.'<p/>';
+		}
+
+		return $widget;
 	}
 }

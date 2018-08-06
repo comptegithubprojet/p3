@@ -34,7 +34,7 @@ class NewsController extends BackController
  
   public function executeIndex(HTTPRequest $request)
   {
-    $this->page->addVar('title', 'Gestion des news');
+    $this->page->addVar('title', 'Liste des news');
  
     $manager = $this->managers->getManagerOf('News');
  
@@ -96,7 +96,7 @@ class NewsController extends BackController
     {
       $this->app->user()->setFlash('Le commentaire a bien été modifié');
  
-      $this->app->httpResponse()->redirect('/admin/');
+      $this->app->httpResponse()->redirect('/admin/comments-list.html');
     }
  
     $this->page->addVar('form', $form->createView());

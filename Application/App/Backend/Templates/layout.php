@@ -50,10 +50,6 @@
     <div id="content-wrap">
       <section id="main">
 
-        <div class="container">
-          <?php if ($user->hasFlash()) echo '<div class="alert col-lg-offset-3 col-lg-6 alert-success alert-dismissable">', $user->getFlash(), '<button type="button" class="close" data-dismiss="alert">&times;</button></div>'; ?>
-        </div>
-
 		<?= $content ?>	         
 
       </section>

@@ -1,8 +1,6 @@
 <div class="container-fluid">
-	<div class="row">
-		<div id="img-fs" class="col-xs-12">
-			<img src="images/1.jpg" class="img-responsive">
-		</div>
+	<div id="img-fs" class="col-xs-12">
+		<img src="images/1.jpg" class="img-responsive">
 	</div>
 </div>
 
