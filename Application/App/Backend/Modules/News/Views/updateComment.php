@@ -1,6 +1,4 @@
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12">
+<div class="container-fluid">
 
 			<div class="admin-block clearfix">
 				<h2 id="title-admin">Modifier le commentaire</h2>
@@ -14,6 +12,4 @@
 				</form>
 			</div>
 
-		</div>
-	</div>
 </div>

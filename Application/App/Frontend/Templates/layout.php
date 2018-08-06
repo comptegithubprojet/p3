@@ -6,16 +6,28 @@
     </title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
  
   <body>
 
-    <div class="container" id="wrap">
-      <header class="row">
-          <h1 id="header-titre">Jean Forteroche</a></h1>
+    <div class="container-fluid" id="wrap">
+      <header id="header-fronted">
+
+        <?php if ($user->isAuthenticated()) { ?>
+        <div class="barre-admin">
+          <ul class="list-inline">
+            <li><a role="btn" class="btn" href="/"><span class="fas fa-home"></span> Accueil du site</a></li>
+            <li><a role="btn" class="btn" href="/admin/"><span class="fas fa-tachometer-alt"></span> Tableau de bord</a></li>
+            <li><a role="btn" class="btn" href="/admin/disconnect.html"><span class="fas fa-power-off"></span> Deconnexion</a></li>
+          </ul>
+        </div>
+        <?php } ?>
+
+        <h1 id="header-titre">Jean Forteroche</a></h1>
+
       </header>
     </div>  
 
