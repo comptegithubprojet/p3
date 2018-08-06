@@ -44,3 +44,22 @@ $(document).ready(function() {
 });
 
 
+function readURL(input) 
+{
+  if (input.files && input.files[0]) 
+  {
+    var reader = new FileReader();
+    
+    reader.onload = function (e) 
+    {
+      $('#preview_image_form')
+        .attr('src', e.target.result)
+        .width()
+        .height();
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+

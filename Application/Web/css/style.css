@@ -467,3 +467,59 @@ html,body
   font-size: 14px;
   font-weight: bold;
 }
+
+
+
+
+#input-file-form
+{
+  background-color: white;
+  max-width: 400px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+}
+
+#header-file-input
+{
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+#preview_image_form
+{
+  max-height: 300px;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media(max-width: 600px)
+{
+  #preview_image_form
+  {
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+
+@media(max-width: 450px)
+{
+  #preview_image_form
+  {
+    max-height: 100px;
+    max-width: 100px;
+  }
+}
+
+#btn-file-input
+{
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+#file-input 
+{
+    display: none;
+}

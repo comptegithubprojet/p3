@@ -32,11 +32,10 @@ class NewsFormBuilder extends FormBuilder
         ],
        ]))
        ->add(new FileField([
-        'label' => 'Image',
+        'label' => 'Ajouter une image',
         'name' => 'imagePrincipale',
-        'accept' => 'image/*',
         'validators' => [
-          new ImageValidator('Merci de spécifier une image', array('.jpg', '.png', '.jpeg')),
+          new ImageValidator('Merci de spécifier une image au bon format', array('.jpg', '.png', '.jpeg', '.bmp', '.tiff', '.gif')),
         ],
        ]))
        ->add(new TextField([
