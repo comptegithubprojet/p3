@@ -44,11 +44,10 @@ body
 .card-header a
 {
   color: #666666;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 30px;
 }
 
-.card-header a:hover
+.card-header a:hover, .card-header a:focus
 {
   text-decoration: none;
   color:#666666;
@@ -98,7 +97,7 @@ body
 .form-signin .form-control
 {
     position: relative;
-    font-size: 16px;
+    font-size: 18px;
     height: auto;
     padding: 10px;
     -webkit-box-sizing: border-box;
@@ -132,31 +131,18 @@ body
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
+
 .login-title
 {
     color: #555;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 400;
     display: block;
 }
 
 
 
-.comments-list .media
-{
-    border-bottom: 1px solid #ccc;
-}
 
-.media
-{
-  padding-bottom: 10px;
-}
-
-.button-comment-add
-{
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
 
 
 
@@ -283,7 +269,7 @@ html,body
 #footer h3
 {
   position: relative;
-  font-size: 60px;
+  font-size: 50px;
   margin: 12px auto 0 auto;
   color: white;
 }
@@ -296,7 +282,7 @@ html,body
 
 #btn-social-footer
 {
-  font-size:30px;
+  font-size:25px;
   color: white;
   text-transform: uppercase;
 }
@@ -364,7 +350,7 @@ html,body
 
 #text-admin
 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #btn-table
@@ -383,7 +369,7 @@ html,body
 #page_navigation a
 {
   border:0px;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 8px;
   margin-right: 10px;
   margin-left: 10px;
@@ -464,7 +450,7 @@ html,body
 #msg_erreur_form
 {
   color:red;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -482,7 +468,7 @@ html,body
 #header-file-input
 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 5px;
   margin-top: 5px;
 }
@@ -531,7 +517,17 @@ html,body
 {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;  
+  margin-bottom: 20px; 
+}
+
+.title-article-view
+{
+  font-size: 30px;
+}
+
+#date-article-view
+{
+  font-size: 16px;
 }
 
 .img-article-view
@@ -539,4 +535,64 @@ html,body
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
+}
+
+.content-article-view
+{
+  font-size: 18px;
+}
+
+.button-comment-add
+{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#button-comment-add
+{
+  font-size: 16px;
+}
+
+.media
+{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#auteur-comment
+{
+  font-size: 16px;
+}
+
+#date-comment
+{
+  font-size: 14px;
+}
+
+#content-comment
+{
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+.modal-title
+{
+  font-size: 22px;
+  text-align: justify;
+}
+
+.modal-body
+{
+  font-size: 18px;
+  text-align: justify;
+}
+
+#btn-modal-footer
+{
+  font-size: 16px;
 }

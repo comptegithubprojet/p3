@@ -9,7 +9,7 @@ class StringField extends Field
     {
       $widget = '';
    
-      $widget .= '<label>'.$this->label.'</label><input class="form-control" type="text" name="'.$this->name.'"';
+      $widget .= '<label id="text-admin">'.$this->label.'</label><input id="text-admin" class="form-control" type="text" name="'.$this->name.'"';
    
       if (!empty($this->value))
       {

@@ -4,7 +4,7 @@
     <div class="col-lg-12">
 
       <div class="header-article-view">
-        <h2 id='title-article-view'><?= $news['titre'] ?></h2>
+        <h2 class='title-article-view'><?= $news['titre'] ?></h2>
         <p id='date-article-view'><?= $news['dateAjout']->format('d/m/Y') ?></p>
       </div>
 
@@ -19,7 +19,7 @@
       }
       ?>
 
-      <p class='content-article-view'><?= nl2br($news['contenu']) ?></p>  
+      <div class='content-article-view'><?= $news['contenu'] ?></div>  
 
     </div>
   </div>
@@ -29,11 +29,11 @@
     <div class="col-lg-12">
 
       <div class="comment-header">
-        <h2>Commentaires (<?= $nbComments ?>)</h2>
+        <h2 class='title-article-view'>Commentaires (<?= $nbComments ?>)</h2>
       </div>
 
       <div class="button-comment-add">
-        <p><a role="button" class="btn btn-primary" href="commenter-<?= $news['id'] ?>.html">Ajouter un commentaire</a></p>
+        <p><a id="button-comment-add" role="button" class="btn btn-primary" href="commenter-<?= $news['id'] ?>.html">Ajouter un commentaire</a></p>
       </div>
 
       <div class="comments-list">
@@ -44,11 +44,11 @@
         ?>
 
         <div class="media">
-          <p><strong><?= htmlspecialchars($comment['auteur']) ?></strong> le <?= $comment['date']->format('d/m/Y à H\hi') ?></p>
-          <p><?= nl2br(htmlspecialchars($comment['contenu'])) ?></p>
-          <?php if ($user->isAuthenticated()) { ?> 
 
-            
+          <p><strong id="auteur-comment"><?= htmlspecialchars($comment['auteur']) ?></strong> <em id="date-comment"><?= $comment['date']->format('d/m/Y à H\hi') ?></em></p>
+          <p id="content-comment"><?= nl2br(htmlspecialchars($comment['contenu'])) ?></p>
+
+          <?php if ($user->isAuthenticated()) { ?> 
 
             <a href="admin/comment-update-<?= $comment['id'] ?>.html">Modifier</a> 
 
@@ -65,8 +65,8 @@
                       <?= $comment['contenu']?>
                     </div>
                     <div class="modal-footer">
-                      <a id="btn_modal_comment" role="button" class="btn btn-danger" href="admin/comment-delete-<?= $comment['id'] ?>.html">Supprimer</a>
-                      <button class="btn btn-default" data-dismiss="modal">Annuler</button>
+                      <a id="btn-modal-footer" role="button" class="btn btn-danger" href="admin/comment-delete-<?= $comment['id'] ?>.html">Supprimer</a>
+                      <button id="btn-modal-footer" class="btn btn-default" data-dismiss="modal">Annuler</button>
                     </div>
                   </div>
                 </div>
@@ -88,8 +88,8 @@
                   <?= $comment['contenu']?>
                 </div>
                 <div class="modal-footer">
-                  <a id="btn_modal_comment" role="button" class="btn btn-danger" href="comment-signal-<?= $comment['id'] ?>.html">Signaler</a>
-                  <button class="btn btn-default" data-dismiss="modal">Annuler</button>
+                  <a id="btn-modal-footer" role="button" class="btn btn-danger" href="comment-signal-<?= $comment['id'] ?>.html">Signaler</a>
+                  <button id="btn-modal-footer" class="btn btn-default" data-dismiss="modal">Annuler</button>
                 </div>
               </div>
             </div>

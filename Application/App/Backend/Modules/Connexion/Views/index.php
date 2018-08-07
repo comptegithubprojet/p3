@@ -5,14 +5,14 @@
             <div class="account-wall">
                 <form action="" method="post" class="form-signin">
                 <div class="form-group">
-                    <label for="pseudo">Pseudo</label>
+                    <label id="text-admin" for="pseudo">Pseudo</label>
                     <input type="text" name="login" id="pseudo" class="form-control" placeholder="Entrer votre E-mail" required autofocus/>
                 </div>
                 <div class="form-group">
-                    <label for="mdp">Mot de passe</label>
+                    <label id="text-admin" for="mdp">Mot de passe</label>
                     <input type="password" id="mdp" name="password" class="form-control" placeholder="Mot de passe" required/>
                 </div>
-                <button type="submit" class="btn btn-lg btn-primary btn-block">Connexion</button>
+                <button id="text-admin" type="submit" class="btn btn-lg btn-primary btn-block">Connexion</button>
                 </form>
             </div>
         </div>

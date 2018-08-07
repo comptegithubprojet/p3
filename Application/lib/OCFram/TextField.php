@@ -10,7 +10,7 @@ class TextField extends Field
   {
     $widget = '';
  
-    $widget .= '<label>'.$this->label.'</label><textarea name="'.$this->name.'"';
+    $widget .= '<label id="text-admin">'.$this->label.'</label><textarea name="'.$this->name.'"';
 
     if(!empty($this->class))
     {
@@ -18,7 +18,7 @@ class TextField extends Field
     }
     else
     {
-      $widget .=' class=form-control';
+      $widget .=' class=form-control id="text-admin"';
     }
 
     if (!empty($this->errorMessage))

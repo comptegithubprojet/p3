@@ -27,11 +27,11 @@
 			          <div class="modal-dialog">
 			            <div class="modal-content">
 			              <div class="modal-header">
-			                <h4 id="text-admin" class="modal-title">Etes vous sur de vouloir supprimer la news  ', $news['titre'], ' ?</h4>
+			                <h4 class="modal-title">Etes vous sur de vouloir supprimer la news  ', $news['titre'], ' ?</h4>
 			              </div>
 			              <div class="modal-footer">
-			                <a id="text-admin" role="button" class="btn btn-danger" href="news-delete-', $news['id'], '.html">Supprimer</a>
-			                <button id="text-admin" class="btn btn-default" data-dismiss="modal">Annuler</button>
+			                <a id="btn-modal-footer" role="button" class="btn btn-danger" href="news-delete-', $news['id'], '.html">Supprimer</a>
+			                <button id="btn-modal-footer" class="btn btn-default" data-dismiss="modal">Annuler</button>
 			              </div>
 			            </div>
 			          </div>

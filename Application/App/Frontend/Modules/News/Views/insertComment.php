@@ -3,7 +3,7 @@
 		<div class="col-lg-12">
 			
 			<div class="header-insert-comment">
-				<h2>Ajouter un commentaire sur l'article "<?= $news['titre'] ?>" </h2>
+				<h2 class="title-article-view">Ajouter un commentaire sur l'article "<?= $news['titre'] ?>" </h2>
 			</div>
 
 			<form class="form-group" action="" method="post">
