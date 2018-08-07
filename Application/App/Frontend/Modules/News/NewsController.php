@@ -49,6 +49,7 @@ class NewsController extends BackController
     $this->page->addVar('title', $news->titre());
     $this->page->addVar('news', $news);
     $this->page->addVar('comments', $this->managers->getManagerOf('Comments')->getListOf($news->id()));
+    $this->page->addVar('nbComments', $this->managers->getManagerOf('Comments')->countNews($news->id()));
   }
  
   public function executeInsertComment(HTTPRequest $request)
@@ -66,6 +67,8 @@ class NewsController extends BackController
     {
       $comment = new Comment;
     }
+
+    $news = $this->managers->getManagerOf('News')->getUnique($request->getData('news'));
  
     $formBuilder = new CommentFormBuilder($comment);
     $formBuilder->build();
@@ -80,7 +83,8 @@ class NewsController extends BackController
  
       $this->app->httpResponse()->redirect('news-'.$request->getData('news').'.html');
     }
- 
+    
+    $this->page->addVar('news', $news);
     $this->page->addVar('comment', $comment);
     $this->page->addVar('form', $form->createView());
     $this->page->addVar('title', 'Ajout d\'un commentaire');

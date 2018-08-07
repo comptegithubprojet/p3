@@ -1,20 +1,26 @@
 <div class="container">
+
   <div class="row">
     <div class="col-lg-12">
-      <h2 id='title-article-view'><?= $news['titre'] ?></h2>
+
+      <div class="header-article-view">
+        <h2 id='title-article-view'><?= $news['titre'] ?></h2>
+        <p id='date-article-view'><?= $news['dateAjout']->format('d/m/Y') ?></p>
+      </div>
+
       <?php
       if ($news['imagePrincipale'] != null) 
       {
-        echo "<img id='img-article-view' class='img-responsive' src='/images/".$news['imagePrincipale']."' >"; 
+        echo "
+        <div>
+          <img class='img-responsive img-article-view' src='/images/".$news['imagePrincipale']."'>
+        </div>
+        "; 
       }
       ?>
-      <p><?= nl2br($news['contenu']) ?></p>    
-      <div class="row">
-        <p class="pull-right">Auteur :  <em><?= $news['auteur'] ?></em>, le <?= $news['dateAjout']->format('d/m/Y à H\hi') ?></p>
-      </div> 
-      <?php if ($news['dateAjout'] != $news['dateModif']) { ?>
-        <p class="pull-right"><small><em>Modifiée le <?= $news['dateModif']->format('d/m/Y à H\hi') ?></em></small></p>
-      <?php } ?> 
+
+      <p class='content-article-view'><?= nl2br($news['contenu']) ?></p>  
+
     </div>
   </div>
 
@@ -23,7 +29,7 @@
     <div class="col-lg-12">
 
       <div class="comment-header">
-        <h2>Commentaires</h2>
+        <h2>Commentaires (<?= $nbComments ?>)</h2>
       </div>
 
       <div class="button-comment-add">

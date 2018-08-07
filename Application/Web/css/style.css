@@ -527,13 +527,16 @@ html,body
 
 
 
-#title-article-view
+.header-article-view
 {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;  
 }
 
-#img-article-view
+.img-article-view
 {
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 20px;
 }

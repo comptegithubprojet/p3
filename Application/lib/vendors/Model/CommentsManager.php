@@ -70,4 +70,11 @@ abstract class CommentsManager extends Manager
    * @return Comment
    */
   abstract public function get($id);
+
+  /**
+   * Méthode permettant d'obtenir le nombre de commentaires par article
+   * @param $news L'identifiant de la news
+   * @return int
+   */
+  abstract public function countNews($news);
 }
